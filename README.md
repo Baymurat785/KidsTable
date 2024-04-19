@@ -1,0 +1,1 @@
+This KidsTable is good for youngsters who are at elementary school. First, you need give some inputs like multiplicand and number of questions. Once you give these inputs, the game will be started. Don't now think much, as it has timer that counts 10 seconds
