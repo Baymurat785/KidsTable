@@ -1,8 +1,26 @@
+<<<<<<< HEAD
 import SwiftUI
 
 
 
 struct CustomTextStyle: ViewModifier{
+=======
+//
+//  AddGameView.swift
+//  KidsTable
+//
+//  Created by Baymurat Abdumuratov on 01/03/24.
+//
+
+import SwiftUI
+
+
+struct CustomTextStyle: ViewModifier {
+    
+  
+    
+    
+>>>>>>> 227a157 (Final change)
     func body(content: Content) -> some View {
         content
             .frame(width: 50, height: 50)
@@ -23,6 +41,7 @@ struct CustomImageStyle: ViewModifier{
 }
 
 
+<<<<<<< HEAD
 struct AddGameView: View{
     @Environment(\.dismiss) var dismiss
     @State var showingNums: String = " "
@@ -52,6 +71,26 @@ struct AddGameView: View{
                 ForEach(questionText, id: \.self) { text in
                     
                 }
+=======
+struct AddGameView: View {
+    @Environment(\.dismiss) var dismiss
+    @State var showingNums: String = " "
+    var questionText: String = ""
+    var userAnswer: String = ""
+
+    
+    var body: some View {
+      
+        NavigationStack{
+            VStack{
+                Spacer()
+                Text(questionText)
+                    .font(.title)
+                    .foregroundStyle(.red)
+                Spacer()
+                
+                    .font(.title)
+>>>>>>> 227a157 (Final change)
                 Text(showingNums)
                     .font(.title)
                     .bold()
@@ -65,7 +104,11 @@ struct AddGameView: View{
                         showingNums += "1"
                     }, label: {
                         ZStack{
+<<<<<<< HEAD
                             Image("1")
+=======
+                            Image("bear")
+>>>>>>> 227a157 (Final change)
                                 .customImageStyle()
                             Text("1")
                                 .customTextStyle()
@@ -75,7 +118,11 @@ struct AddGameView: View{
                         showingNums += "2"
                     }, label: {
                         ZStack{
+<<<<<<< HEAD
                             Image("2")
+=======
+                            Image("buffalo")
+>>>>>>> 227a157 (Final change)
                                 .customImageStyle()
                             Text("2")
                                 .customTextStyle()
@@ -85,7 +132,11 @@ struct AddGameView: View{
                         showingNums += "3"
                     }, label: {
                         ZStack{
+<<<<<<< HEAD
                             Image("3")
+=======
+                            Image("chick")
+>>>>>>> 227a157 (Final change)
                                 .customImageStyle()
                             
                             Text("3")
@@ -99,7 +150,11 @@ struct AddGameView: View{
                         showingNums += "4"
                     }, label: {
                         ZStack{
+<<<<<<< HEAD
                             Image("4")
+=======
+                            Image("chicken")
+>>>>>>> 227a157 (Final change)
                                 .customImageStyle()
                             
                             Text("4")
@@ -110,7 +165,11 @@ struct AddGameView: View{
                         showingNums += "5"
                     }, label: {
                         ZStack{
+<<<<<<< HEAD
                             Image("5")
+=======
+                            Image("cow")
+>>>>>>> 227a157 (Final change)
                                 .customImageStyle()
                             
                             Text("5")
@@ -121,7 +180,11 @@ struct AddGameView: View{
                         showingNums += "6"
                     }, label: {
                         ZStack{
+<<<<<<< HEAD
                             Image("6")
+=======
+                            Image("crocodile")
+>>>>>>> 227a157 (Final change)
                                 .customImageStyle()
                             
                             Text("6")
@@ -135,7 +198,11 @@ struct AddGameView: View{
                         showingNums += "7"
                     }, label: {
                         ZStack{
+<<<<<<< HEAD
                             Image("7")
+=======
+                            Image("duck")
+>>>>>>> 227a157 (Final change)
                                 .customImageStyle()
                             
                             
@@ -147,7 +214,11 @@ struct AddGameView: View{
                         showingNums += "8"
                     }, label: {
                         ZStack{
+<<<<<<< HEAD
                             Image("8")
+=======
+                            Image("dog")
+>>>>>>> 227a157 (Final change)
                                 .customImageStyle()
                             
                             Text("8")
@@ -158,7 +229,11 @@ struct AddGameView: View{
                         showingNums += "9"
                     }, label: {
                         ZStack{
+<<<<<<< HEAD
                             Image("9")
+=======
+                            Image("giraffe")
+>>>>>>> 227a157 (Final change)
                                 .customImageStyle()
                             
                             Text("9")
@@ -166,7 +241,10 @@ struct AddGameView: View{
                         }
                     })
                 }
+<<<<<<< HEAD
                 
+=======
+>>>>>>> 227a157 (Final change)
                 Spacer()
                 HStack(alignment: .center, spacing: 60){
                     Button(action: {
@@ -187,7 +265,11 @@ struct AddGameView: View{
                         showingNums += "0"
                     }, label: {
                         ZStack{
+<<<<<<< HEAD
                             Image("0")
+=======
+                            Image("elephant")
+>>>>>>> 227a157 (Final change)
                                 .customImageStyle()
                             
                             Text("0")
@@ -196,8 +278,14 @@ struct AddGameView: View{
                     })
                     
                     Button(action: {
+<<<<<<< HEAD
                         checkAnswer(userAnswer: questionText[questionIndex]) // Checking the answer...
                         
+=======
+
+                        
+
+>>>>>>> 227a157 (Final change)
                     }, label: {
                         Image(systemName: "arrow.forward")
                             .resizable()
@@ -218,6 +306,7 @@ struct AddGameView: View{
                 }
             }
             
+<<<<<<< HEAD
         }.alert("You have finished the round", isPresented: $showingAlert) {
             HStack{
                 Button("Continue"){
@@ -284,12 +373,20 @@ struct AddGameView: View{
         questions.append(Question(multiplicand: 0, multiplier: 0))
         return questions
     }
+=======
+        }
+    }
+    
+>>>>>>> 227a157 (Final change)
     
     
     
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 227a157 (Final change)
 extension View{
     func customTextStyle() -> some View{
         self.modifier(CustomTextStyle())
@@ -302,13 +399,20 @@ extension Image {
             .resizable()
             .scaledToFill()
             .frame(width: 90, height: 90)
+<<<<<<< HEAD
             .rotationEffect(.degrees(360))
             .animation(.easeInOut(duration: 0.5))
+=======
+>>>>>>> 227a157 (Final change)
     }
 }
 
 #Preview {
+<<<<<<< HEAD
     //    AddGameView(questionText: [Question(multiplicand: 0, multiplier: 0)], q)
     
     AddGameView(questionText: [Question(multiplicand: 0, multiplier: 0)], multiplicand: 0, numberOfQuestions: 0)
+=======
+    AddGameView(questionText: String())
+>>>>>>> 227a157 (Final change)
 }
